@@ -1,0 +1,28 @@
+Package: refitgaps
+Title: Reduce the Number of Holes in the School Timetable
+Version: 0.1.1
+Authors@R: 
+    person("Vlad", "Bazon", email = "vlad.bazon@gmail.com", role = c("aut", "cre"))
+Description: If a teacher was assigned, say, hours 1, 2, 4, 6 for his lessons
+    on the current day, then he got two "gaps" (or "holes"), in hours 3 and 5.
+    If the total number of holes in the existing daily schedule is too large
+    (exceeding, say, 6% of the total lessons), then the problem arises of
+    reallocating the respective lessons by hours (respecting the constraints
+    induced by the existence of coupled lessons) so that 
+    the total number of holes is as small as possible.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Language: ro
+RoxygenNote: 7.3.2
+Imports: dplyr, magrittr, purrr, rlang, stats, tibble
+Depends: R (>= 3.5.0)
+LazyData: true
+Suggests: knitr, rmarkdown, stringr, testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+NeedsCompilation: no
+Packaged: 2025-04-27 07:23:37 UTC; vb
+Author: Vlad Bazon [aut, cre]
+Maintainer: Vlad Bazon <vlad.bazon@gmail.com>
+Repository: CRAN
+Date/Publication: 2025-04-28 18:40:02 UTC
