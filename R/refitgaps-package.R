@@ -10,5 +10,7 @@
 #' @importFrom purrr map
 #' @importFrom rlang .data
 #' @importFrom stats setNames
+#' @importFrom stringr str_count
+#' @importFrom stringr str_extract
 ## usethis namespace: end
 NULL

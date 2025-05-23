@@ -1,5 +1,9 @@
 #' Evidențiază orarele profesorilor care au ferestre
 #'
+#' Se șablonează orarele individuale, înlocuind clasele cu câte un asterisc; 
+#' fereastră înseamnă atunci orice '-' aflat între două asteriscuri; iar
+#' pentru cei angajați în cuplaje, se cumulează șabloanele membrilor.
+#'
 #' @param OZ Matrice-orar; liniile sunt numite după profesori/cuplaje; pe
 #'     fiecare linie sunt înregistrate pe ore clasele la care intră profesorul
 #'     (sau '-' dacă este liber); fiecare clasă apare o singură dată, pe 
@@ -42,3 +46,19 @@ have_gaps <- function(OZ) {
     OZ %>% filter(.data$ore != "")
 }
 
+#' Numărul de ferestre dintr-o matrice-orar dată
+#'
+#' Aplicație imediată a funcției 'have_gaps()'; servește de exemplu, pentru
+#' a afla câte ferestre sunt pe matricea-orar inițială (pe care ar urma să se
+#' aplice 'recast()', pentru a reduce numărul de ferestre).
+#'
+#' @param OZ Matrice-orar 
+#' @return Numărul de ferestre, considerând cuplajele și profesorii externi
+#' @export
+
+gaps_count <- function(OZ) {
+    HG <- have_gaps(OZ)
+    str_extract(HG$ore, "\\*.+\\*") %>%
+        paste0(collapse = "") %>% 
+        str_count("-")
+}

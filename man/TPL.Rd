@@ -5,12 +5,10 @@
 \alias{TPL}
 \title{Tupled lessons for 'MOZ'}
 \format{
-6 tuplaje asociate matricei-orar 'MOZ'.
-Lecțiile dintr-un același tuplaj au fost alocate într-o aceeași oră.
 \describe{
 \item{prof}{Vectorul profesorilor sau cuplajelor din tuplaj}
 \item{cls}{Vectorul claselor din tuplaj, de aceeași lungime cu 'prof';
-pentru fiecare tuplaj, asocierea prof|cls (în cadrul matricei-orar)
+pentru fiecare tuplaj asocierea 'prof/cls' (în cadrul matricei-orar)
 respectă ordinea profesorilor și claselor din acel tuplaj}
 \item{ora}{Ora alocată în matricea-orar lecțiilor din tuplaj}
 }
@@ -19,6 +17,7 @@ respectă ordinea profesorilor și claselor din acel tuplaj}
 TPL
 }
 \description{
-Tupled lessons for 'MOZ'
+6 tuplaje asociate matricei-orar 'MOZ'.
+Lecțiile dintr-un același tuplaj au fost alocate într-o aceeași oră.
 }
 \keyword{datasets}

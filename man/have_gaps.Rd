@@ -18,7 +18,9 @@ Subsetul liniilor cu ferestre; pentru cazul ferestrelor "ascunse"
 în care este implicat profesorul respectiv.
 }
 \description{
-Evidențiază orarele profesorilor care au ferestre
+Se șablonează orarele individuale, înlocuind clasele cu câte un asterisc;
+fereastră înseamnă atunci orice '-' aflat între două asteriscuri; iar
+pentru cei angajați în cuplaje, se cumulează șabloanele membrilor.
 }
 \examples{
 HG <- have_gaps(MOZ) 
